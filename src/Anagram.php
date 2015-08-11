@@ -22,9 +22,13 @@
           sort($array_of_letters);
           $no_space = array(" ");
 
-          if ($array_of_letters === $split_word_array) {
+          if ($array_of_letters === $split_word_array)
+          // if (array_intersect($array_of_letters, $split_word_array))
+          {
+            // $matching_words = in_array($input_word, $library);
             $output_word = $single_word;
             $output = $output_word;
+            // $output = implode(" ", $matching_words);
             break;
           }
 
