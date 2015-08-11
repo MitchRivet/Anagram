@@ -56,5 +56,19 @@
           //Assert
           $this->assertEquals("gel", $result);
         }
+
+        function test_findAnagram_numberInput()
+        {
+            //Arrange
+            $test_Anagram = new Anagram;
+            $input = "1";
+
+            //Act
+            $result = $test_Anagram->findAnagram($input);
+
+            //Assert
+            $this->assertEquals("Please enter a single word.", $result);
+
+        }
     }
 ?>
