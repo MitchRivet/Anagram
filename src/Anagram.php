@@ -5,8 +5,9 @@
     {
         function findAnagram($input_word)
       {
-        include "anagram_library.php";
+        include "new_anagram_library.php";
 
+        $library = explode("\n", $new_library);
         $array_of_letters = str_split($input_word);
         $output = "";
 
