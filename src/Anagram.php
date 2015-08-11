@@ -14,6 +14,7 @@
         {
 
           $split_word = str_split($single_word);
+
           if(in_array($array_of_letters, $split_word))
           {
             $output_word = $single_word;
