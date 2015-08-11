@@ -18,7 +18,7 @@
             $this->assertEquals("No anagrams found.", $result);
         }
 
-        function test_findAnagram_twoLetterError() 
+        function test_findAnagram_twoLetterError()
         {
             //Arrange
             $test_Anagram = new Anagram;
@@ -31,11 +31,30 @@
             $this->assertEquals("No anagrams found.", $result);
         }
 
-        // function test_findAnagram_twoLetter()
-        // {
-        //     //Arrange
-        //     $test_AnagramTest = new AnagramTest;
-        //     $input
-        // }
+        function test_findAnagram_twoLetter()
+        {
+            //Arrange
+            $test_Anagram = new Anagram;
+            $input = "no";
+
+            //Act
+            $result = $test_Anagram->findAnagram($input);
+
+            //Assert
+            $this->assertEquals("on", $result);
+        }
+
+        function test_findAnagram_threeLetter()
+        {
+          //Arrange
+          $test_Anagram = new Anagram;
+          $input = "leg";
+
+          //Act
+          $result = $test_Anagram->findAnagram($input);
+
+          //Assert
+          $this->assertEquals("gel", $result);
+        }
     }
 ?>
