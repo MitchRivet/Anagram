@@ -70,5 +70,17 @@
             $this->assertEquals("Please enter a single word.", $result);
 
         }
+        function test_findAnagram_multipleWord()
+        {
+          //Arrange
+          $test_Anagram = new Anagram;
+          $input = "hey there";
+
+          //Act
+          $result = $test_Anagram->findAnagram($input);
+
+          //Assert
+          $this->assertEquals("Please enter a single word.", $result); 
+        }
     }
 ?>

@@ -19,13 +19,21 @@
           sort($numbers);
           sort($split_word_array);
           sort($array_of_letters);
+          $no_space = array(" ");
 
           if ($array_of_letters === $split_word_array) {
             $output_word = $single_word;
             $output = $output_word;
             break;
           }
+
           elseif (array_intersect($array_of_letters, $numbers)) {
+            $number_message = "Please enter a single word.";
+            $output = $number_message;
+            break;
+          }
+          elseif (array_intersect($array_of_letters, $no_space))
+          {
             $number_message = "Please enter a single word.";
             $output = $number_message;
             break;
@@ -36,7 +44,6 @@
                 }
 
         }
-        var_dump($output);
 
         return $output;
       }
